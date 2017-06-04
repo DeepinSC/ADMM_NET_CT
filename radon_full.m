@@ -7,7 +7,7 @@ A = zeros(theta,length,width);
 x = zeros(theta,1);
 
 
-if 0<p_start(1)&& p_start(1)<width &&  0<p_start(0) && p_start(0)<length
+if 0<p_start(2)&& p_start(2)<width &&  0<p_start(1) && p_start(1)<length
     error('初始点在图像内部');
 end
 

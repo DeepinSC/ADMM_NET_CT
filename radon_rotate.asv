@@ -1,5 +1,17 @@
 function [A,x] = radon_rotate(img,theta,p_start,ro_theta)
 % img输入图像
-% theta 源射线变化角度
+% theta 源射线变化角度个数
 % p_start 起始位置
-% ro_theta 源旋转角度
+% ro_theta 源旋转角度个数(包含初始点）
+
+[length,width] = size(img);
+center = [length/2,width/2]; %图像的中心
+R = norm(p_start-center);
+gamma = 360/ro_theta; %每次旋转角度
+theta0 = atan((center(2)-p_start(2))/(center(1)-p_start(1)))*180/pi;
+point = zeros(ro_theta,2);
+for i = 1:ro_theta
+    point(i,1) = p_start(1)+R*sin(theta0+gamma*(i-1));
+    point(i,2) = p_start(2)+R*cos(theta0+gamma*(i-1));
+end
+
