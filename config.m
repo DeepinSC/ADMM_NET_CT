@@ -6,7 +6,7 @@ nnconfig.Stage = 5;
 nnconfig.Padding = 1;
 nnconfig.LinearLabel = double(-1:0.02:1);
 %% training and testing setting
-nnconfig.EnableGPU = 1;
+nnconfig.EnableGPU = 0;
 nnconfig.WeightDecay = 0;
 
 

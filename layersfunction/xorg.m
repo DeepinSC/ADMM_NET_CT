@@ -18,7 +18,7 @@ for i = 1 : fN
     H(:,:,i) = reshape(B*gamma(:,i),fS,fS);
 end
 HT = rot90(H,2);
-load('./mask.mat')
+load('mask.mat')
 mask = logical( ifftshift(mask) );
 Denom1 = zeros(m , n) ; Denom1(mask) = 1 ;
 Denom2 = zeros(m,m);

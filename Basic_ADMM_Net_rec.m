@@ -7,11 +7,11 @@ function  Basic_ADMM_Net_rec(  )
 % clear all;
 
 %% Load trained network
-load('./net/network_20/net-stage15.mat')
+load('net/network_20/net-stage15.mat')
 %% Load data 
-load('./data/Brain_data/Brain_data2.mat')
+load('data/Brain_data/Brain_data2.mat')
 %load('.data/Chest_data/chest_data1.mat')
-load('./mask/mask_20.mat')
+load('mask/mask_20.mat')
 %% Undersampling in the k-space
 kspace_full = fft2(im_ori); 
 y = (double(kspace_full)) .* (ifftshift(mask));
