@@ -1,6 +1,6 @@
 clear;
 img = double(imread('rec_image.png'));
-theta = 300;
+theta = 900;
 p_start = [-100,-100];
 [A,x] = radon_full(img,theta,p_start);
 res_A = reshape(A,theta,[]);

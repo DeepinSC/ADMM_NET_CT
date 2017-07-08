@@ -8,6 +8,7 @@ function  Basic_ADMM_Net_rec(  )
 
 %% Load trained network
 load('net/network_20/net-stage15.mat')
+%load('Train_output/net/net-088.mat')
 %% Load data 
 load('data/Brain_data/Brain_data2.mat')
 %load('.data/Chest_data/chest_data1.mat')
